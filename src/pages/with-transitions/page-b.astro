@@ -1,5 +1,6 @@
 ---
 import TransitionsLayout from "../../layouts/TransitionsLayout.astro";
+import { slide, fade } from "astro:transitions";
 ---
 
 <TransitionsLayout title="Article — With Transitions">
@@ -15,8 +16,8 @@ import TransitionsLayout from "../../layouts/TransitionsLayout.astro";
     <span class="badge badge--on">Transitions ON</span>
   </div>
 
-  <main class="page-shell" transition:animate="slide">
-    <div class="article-hero" transition:name="page-hero">
+  <main class="page-shell" transition:animate={slide({ duration: '75ms' })}>
+    <div class="article-hero" transition:name="page-hero" transition:animate={fade({ duration: '75ms' })}>
       <h1>Article</h1>
     </div>
 
