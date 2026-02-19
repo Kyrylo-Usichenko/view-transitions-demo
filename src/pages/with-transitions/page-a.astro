@@ -1,0 +1,39 @@
+---
+import TransitionsLayout from "../../layouts/TransitionsLayout.astro";
+---
+
+<TransitionsLayout title="Gallery — With Transitions">
+  <nav class="nav" transition:persist>
+    <a href="/" class="nav-title">&larr; Home</a>
+    <ul class="nav-links">
+      <li><a href="/with-transitions/page-a" class="active">Gallery</a></li>
+      <li><a href="/with-transitions/page-b">Article</a></li>
+    </ul>
+  </nav>
+
+  <div class="mode-indicator">
+    <span class="badge badge--on">Transitions ON</span>
+  </div>
+
+  <main class="page-shell" transition:animate="slide">
+    <div class="gallery-hero" transition:name="page-hero">
+      <h1>Gallery</h1>
+    </div>
+
+    <p class="gallery-subtitle">A collection of blue things. Click a link to navigate to the Article page.</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-card"><span>🌊</span>Ocean</div>
+      <div class="gallery-card"><span>🦋</span>Butterfly</div>
+      <div class="gallery-card"><span>💎</span>Diamond</div>
+      <div class="gallery-card"><span>🫐</span>Blueberry</div>
+      <div class="gallery-card"><span>🧊</span>Ice</div>
+      <div class="gallery-card"><span>☁️</span>Sky</div>
+    </div>
+
+    <div class="gallery-nav">
+      <a href="/with-transitions/page-b" class="btn btn--red">Go to Article &rarr;</a>
+    </div>
+    <p class="hint">Watch — no blink, smooth morph</p>
+  </main>
+</TransitionsLayout>

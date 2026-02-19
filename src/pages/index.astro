@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="View Transitions Demo">
+  <div class="index-center">
+    <h1>View Transitions API</h1>
+    <p>
+      Two demos with the same pages — a blue Gallery and a red Article.
+      One uses standard navigation (you'll see a white blink).
+      The other uses the View Transition API (smooth, no blink).
+    </p>
+
+    <div class="index-grid">
+      <div class="demo-card">
+        <span class="badge badge--off">Transitions OFF</span>
+        <h2>Without Transitions</h2>
+        <p>
+          Standard full-page reload. The browser tears down the page
+          and rebuilds it — you'll see a white flash between the
+          dark pages on every click.
+        </p>
+        <a href="/no-transitions/page-a" class="btn">Try it &rarr;</a>
+      </div>
+
+      <div class="demo-card">
+        <span class="badge badge--on">Transitions ON</span>
+        <h2>With Transitions</h2>
+        <p>
+          View Transition API via Astro's ClientRouter. The blue hero
+          morphs into the red hero. Content slides. No white flash.
+          No blink.
+        </p>
+        <a href="/with-transitions/page-a" class="btn">Try it &rarr;</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
