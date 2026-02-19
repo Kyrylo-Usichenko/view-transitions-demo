@@ -16,12 +16,18 @@ import { slide, fade } from "astro:transitions";
     <span class="badge badge--on">Transitions ON</span>
   </div>
 
-  <main class="page-shell" transition:animate={slide({ duration: '75ms' })}>
-    <div class="gallery-hero" transition:name="page-hero" transition:animate={fade({ duration: '75ms' })}>
+  <main class="page-shell" transition:animate={fade({ duration: "50ms" })}>
+    <div
+      class="gallery-hero"
+      transition:name="page-hero"
+      transition:animate={fade({ duration: "50ms" })}
+    >
       <h1>Gallery</h1>
     </div>
 
-    <p class="gallery-subtitle">A collection of blue things. Click a link to navigate to the Article page.</p>
+    <p class="gallery-subtitle">
+      A collection of blue things. Click a link to navigate to the Article page.
+    </p>
 
     <div class="gallery-grid">
       <div class="gallery-card"><span>🌊</span>Ocean</div>
@@ -33,7 +39,9 @@ import { slide, fade } from "astro:transitions";
     </div>
 
     <div class="gallery-nav">
-      <a href="/with-transitions/page-b" class="btn btn--red">Go to Article &rarr;</a>
+      <a href="/with-transitions/page-b" class="btn btn--red"
+        >Go to Article &rarr;</a
+      >
     </div>
     <p class="hint">Watch — no blink, smooth morph</p>
   </main>

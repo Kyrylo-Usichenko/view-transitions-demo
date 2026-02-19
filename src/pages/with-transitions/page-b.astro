@@ -16,8 +16,12 @@ import { slide, fade } from "astro:transitions";
     <span class="badge badge--on">Transitions ON</span>
   </div>
 
-  <main class="page-shell" transition:animate={slide({ duration: '75ms' })}>
-    <div class="article-hero" transition:name="page-hero" transition:animate={fade({ duration: '75ms' })}>
+  <main class="page-shell" transition:animate={fade({ duration: "50ms" })}>
+    <div
+      class="article-hero"
+      transition:name="page-hero"
+      transition:animate={fade({ duration: "50ms" })}
+    >
       <h1>Article</h1>
     </div>
 
@@ -30,10 +34,10 @@ import { slide, fade } from "astro:transitions";
     <div class="article-body">
       <h2>Why View Transitions Matter</h2>
       <p>
-        Traditional multi-page websites reload the entire document on every navigation.
-        The browser tears down the current page, shows a blank white screen for a brief
-        moment, then paints the new page from scratch. On dark-themed sites this creates
-        an obvious and jarring white flash.
+        Traditional multi-page websites reload the entire document on every
+        navigation. The browser tears down the current page, shows a blank white
+        screen for a brief moment, then paints the new page from scratch. On
+        dark-themed sites this creates an obvious and jarring white flash.
       </p>
 
       <blockquote>
@@ -42,16 +46,18 @@ import { slide, fade } from "astro:transitions";
       </blockquote>
 
       <p>
-        The View Transition API solves this by letting the browser capture a screenshot
-        of the old page, then crossfade or morph it into the new page. The result feels
-        like a native app — smooth, continuous, and without any blank frames.
+        The View Transition API solves this by letting the browser capture a
+        screenshot of the old page, then crossfade or morph it into the new
+        page. The result feels like a native app — smooth, continuous, and
+        without any blank frames.
       </p>
 
       <h2>No Blink Here</h2>
       <p>
-        Notice how you got here without any white flash? The blue hero morphed into
-        the red hero. The content slid in smoothly. The nav bar stayed in place.
-        Go back to the Gallery — the transition reverses just as smoothly.
+        Notice how you got here without any white flash? The blue hero morphed
+        into the red hero. The content slid in smoothly. The nav bar stayed in
+        place. Go back to the Gallery — the transition reverses just as
+        smoothly.
       </p>
       <p>
         Compare this with the "Without Transitions" version from the home page
@@ -66,7 +72,9 @@ import { slide, fade } from "astro:transitions";
     </div>
 
     <div class="article-nav">
-      <a href="/with-transitions/page-a" class="btn btn--blue">&larr; Back to Gallery</a>
+      <a href="/with-transitions/page-a" class="btn btn--blue"
+        >&larr; Back to Gallery</a
+      >
     </div>
     <p class="hint">The hero morphed, content slid, no blink at all</p>
   </main>
