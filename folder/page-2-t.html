@@ -1,7 +1,3 @@
----
-import "./../../styles/global.css";
----
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,6 +12,7 @@ import "./../../styles/global.css";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Article — View Transitions</title>
 
+    <link rel="stylesheet" href="index.css" />
     <!-- <link rel="expect" href="#lead-content" blocking="render" /> -->
   </head>
   <body>
@@ -68,8 +65,8 @@ import "./../../styles/global.css";
             Did you see the blue hero morph into this red hero? The content slid
             in from the right while the old content slid out to the left. The
             nav bar stayed perfectly in place. All of this is done with pure CSS
-            and the native <code>@view-transition</code> at-rule — no JavaScript,
-            no framework.
+            and the native <code>@view-transition</code> at-rule — no
+            JavaScript, no framework.
           </p>
           <p>Click "Back to Gallery" to see the transition in reverse.</p>
         </div>
@@ -81,9 +78,7 @@ import "./../../styles/global.css";
         </div>
 
         <div class="nav-btn">
-          <a href="/with-transitions/page-a" class="btn"
-            >&larr; Back to Gallery</a
-          >
+          <a href="./page-1-t.html" class="btn">&larr; Back to Gallery</a>
         </div>
         <p class="hint">The hero morphed from blue to red, content slid in</p>
       </div>
